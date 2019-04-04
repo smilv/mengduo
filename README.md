@@ -10,7 +10,7 @@
 | —— components - 组件  
 | —— route - 路由  
 | —— utils - js 工具类  
-| —— views - 页面组件
+| —— views - 页面组件  
 | App.vue - 主页组件  
 | main.js - 主入口文件
 
