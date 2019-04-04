@@ -1,10 +1,13 @@
+process.env.NODE_ENV = "production";
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const path = require("path");
+const env = require("./env");
+
 module.exports = {
-    mode: "development",
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, "../build"),
@@ -46,7 +49,8 @@ module.exports = {
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: "static/css/main.[contenthash:8].css"
-        })
+        }),
+        new webpack.DefinePlugin(env)
     ],
     optimization: {
         splitChunks: {

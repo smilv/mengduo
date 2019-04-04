@@ -1,5 +1,5 @@
 <script>
-    import "../utils/tools.js";
+    import axios from "../axios";
     export default {
         data() {
             return {
@@ -11,7 +11,8 @@
             };
         },
         mounted() {
-            this.videoSize = this.mathRand()
+            this.videoSize = this.mathRand();
+            axios.egGet("", { id: 1 })
         },
         methods: {
             mathRand() {
@@ -29,6 +30,7 @@
         <div class="main">
             <div class="withme-content">{{this.videoData}}</div>
             {{this.videoSize}}
+            {{this.skuPath}}
         </div>
     </div>
 </template>

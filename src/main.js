@@ -1,8 +1,7 @@
-import "lib-flexible";
-
 import Vue from "vue";
 import App from "./App";
 import router from "./route";
+import "./utils/initial";
 
 new Vue({
     router,

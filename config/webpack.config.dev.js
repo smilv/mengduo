@@ -1,9 +1,11 @@
+process.env.NODE_ENV = "development";
+
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const path = require("path");
+const env = require("./env");
 module.exports = {
-    mode: "development",
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, "../build"),
@@ -42,7 +44,8 @@ module.exports = {
             inject: true
         }),
         new VueLoaderPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin(env)
     ],
     devServer: {
         contentBase: path.resolve(__dirname, "../build"),
