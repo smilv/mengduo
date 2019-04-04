@@ -34,14 +34,12 @@
 </template>
 <style scoped>
     .main {
-        min-height: 100%;
+        height: 100px;
         padding-bottom: 370px;
         box-sizing: border-box;
     }
     .withme-content {
-        display: -webkit-flex;
         display: flex;
-        -webkit-justify-content: space-between;
         justify-content: space-between;
         padding: 0 30px 30px;
     }

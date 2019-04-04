@@ -1,9 +1,10 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const path = require("path");
 module.exports = {
-    mode: "production",
+    mode: "development",
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, "../build"),
@@ -25,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: [MiniCssExtractPlugin.loader, "css-loader"]
+                loader: [MiniCssExtractPlugin.loader, "css-loader", "px2rem-loader", "postcss-loader"]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
@@ -37,6 +38,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../index.html"),
             inject: true
