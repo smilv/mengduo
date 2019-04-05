@@ -22,7 +22,6 @@ npm run build 打包编译
 
 #### 开发建议
 
--   文件夹命名采用英文小写字母，用"-"分隔单词，如 meng-duo
 -   组件文件命名采用帕斯卡命名法，如：MengCard.vue
 -   js、css 文件命名采用英文小写字母，用"-"分隔单词，如 meng-card.js meng-card.css
 -   img 文件命名采用下划线命名法，用"\_"分隔单词，如 meng_icon.png
