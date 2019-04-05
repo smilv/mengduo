@@ -21,10 +21,10 @@ npm start 本地开发
 npm run build 打包编译
 
 #### 开发建议
-
--   组件文件命名采用帕斯卡命名法，如：MengCard.vue
--   js、css 文件命名采用英文小写字母，用"-"分隔单词，如 meng-card.js meng-card.css
--   img 文件命名采用下划线命名法，用"\_"分隔单词，如 meng_icon.png
+-   components文件夹下的子文件夹命名规则：KebabCase，其他文件夹统一使用kebab-case
+-   组件文件命名规则，如：KebabCase.vue
+-   js、css 文件命名规则：kebab-case.js kebab-case.css
+-   img 文件命名规则：kebab_case.png
 
 #### 资源链接
 
