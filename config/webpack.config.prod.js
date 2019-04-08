@@ -1,5 +1,6 @@
 process.env.NODE_ENV = "production";
 
+const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -8,6 +9,7 @@ const path = require("path");
 const env = require("./env");
 
 module.exports = {
+    mode: "production",
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, "../build"),
