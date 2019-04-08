@@ -1,0 +1,141 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+span,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft Yahei;
+}
+
+body,
+html {
+    font: 14px/150% arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+p {
+    text-justify: distribute;
+}
+
+body,
+html {
+    background: #f6f6f6;
+    cursor: default;
+    word-break: break-all;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+address,
+cite,
+dfn,
+em,
+var,
+i {
+    font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: couriernew, courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    resize: none;
+    outline: none;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+select {
+    border: 0;
+    outline: none;
+}
+
+.toast {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: auto;
+    height: auto;
+    line-height: 48px;
+    padding: 28px 45px;
+    font-size: 32px;
+    top: 45%;
+    color: #fff;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.toolsIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../img/tools-icon.png") no-repeat;
+    background-size: 100%;
+}

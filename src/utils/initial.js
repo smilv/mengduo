@@ -1,4 +1,5 @@
 import Vue from "vue";
+import "../assets/css/common.css";
 import "lib-flexible";
 
 Vue.prototype.skuPath = _skuPath;

@@ -13,7 +13,7 @@ instance.interceptors.request.use(
 //响应拦截器
 instance.interceptors.response.use(
     response => {
-        return Promise.reject(response.data);
+        return Promise.resolve(response.data);
     },
     error => {
         return Promise.reject(error);
@@ -29,7 +29,7 @@ export default {
         });
     },
     egGet: (data, params) => {
-        return instance.post(_skuPath + "/user/info/", data, {
+        return instance.get(_skuPath + "/user/info/", data, {
             headers: {
                 cs: 12345
             },

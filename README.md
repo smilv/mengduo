@@ -9,6 +9,7 @@
 | —— assets - 静态资源  
 | —— axios - 接口调用  
 | —— components - 组件  
+| —— mock - 假数据  
 | —— route - 路由  
 | —— utils - js 工具类  
 | —— views - 页面组件  
@@ -21,7 +22,8 @@ npm start 本地开发
 npm run build 打包编译
 
 #### 开发建议
--   components文件夹下的子文件夹命名规则：KebabCase，其他文件夹统一使用kebab-case
+
+-   使用 vue 作为 vue 组件的扩展名
 -   组件文件命名规则：KebabCase.vue
 -   js、css 文件命名规则：kebab-case.js kebab-case.css
 -   img 文件命名规则：kebab_case.png
