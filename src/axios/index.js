@@ -21,7 +21,7 @@ instance.interceptors.response.use(
 );
 export default {
     egPost: (data, params) => {
-        return instance.post(_ucPath + "/user/info", data, {
+        return instance.post(_apiPath + "/user/info", data, {
             headers: {
                 cs: 12345
             },
@@ -29,14 +29,11 @@ export default {
         });
     },
     egGet: (data, params) => {
-        return instance.get(_skuPath + "/city/list", data, {
+        return instance.get(_apiPath + "/user/info", data, {
             headers: {
                 cs: 12345
             },
             params
         });
-    },
-    cityList: () => {
-        return instance.post(_ucPath + "/city/list");
     }
 };
