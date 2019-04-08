@@ -1,6 +1,6 @@
 import axios from "axios";
 const instance = axios.create();
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 //请求拦截器
 instance.interceptors.request.use(
     config => {
@@ -21,7 +21,7 @@ instance.interceptors.response.use(
 );
 export default {
     egPost: (data, params) => {
-        return instance.post("/user/info/", data, {
+        return instance.post(_ucPath + "/user/info", data, {
             headers: {
                 cs: 12345
             },
@@ -29,11 +29,14 @@ export default {
         });
     },
     egGet: (data, params) => {
-        return instance.get(_skuPath + "/user/info/", data, {
+        return instance.get(_skuPath + "/city/list", data, {
             headers: {
                 cs: 12345
             },
             params
         });
+    },
+    cityList: () => {
+        return instance.post(_ucPath + "/city/list");
     }
 };

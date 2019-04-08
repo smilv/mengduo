@@ -16,7 +16,10 @@
         },
         mounted() {
             this.videoSize = this.mathRand();
-            axios.egGet("", { id: 1 }).then(response => {
+            axios.cityList().then(response => {
+                console.log(response);
+            });
+            axios.egPost({ data: 1 }, { id: 1 }).then(response => {
                 console.log(response);
             });
             tools.toast("333");
