@@ -136,6 +136,6 @@ select {
     top: 0;
     bottom: 0;
     margin: auto;
-    background: url("../img/tools-icon.png") no-repeat;
+    background: url("../img/tools_icon.png") no-repeat;
     background-size: 100%;
 }
