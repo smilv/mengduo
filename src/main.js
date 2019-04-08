@@ -1,6 +1,8 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./route";
+import "lib-flexible";
+import "./assets/css/common.css";
 import "./utils/filters";
 import "./utils/initial";
 
