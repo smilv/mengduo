@@ -11,12 +11,10 @@ export default new Router({
     routes: [
         {
             path: "/",
-            name: "home",
             component: Home
         },
         {
             path: "/tab",
-            name: "tab",
             component: Tab
         }
     ]
