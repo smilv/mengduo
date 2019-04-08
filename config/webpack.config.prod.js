@@ -2,6 +2,7 @@ process.env.NODE_ENV = "production";
 
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
@@ -56,6 +57,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "static/css/main.[contenthash:8].css"
         }),
+        new OptimizeCssAssetsPlugin(),
         new webpack.DefinePlugin(env)
     ],
     optimization: {
