@@ -1,13 +1,11 @@
 <script>
-    import "./css/index.css";
     import axios from "../../axios";
     import Loading from "../../components/Loading";
     export default {
         components: {
-            Loading,
+            Loading
         }
-    }
-
+    };
 </script>
 <template>
     <div>
