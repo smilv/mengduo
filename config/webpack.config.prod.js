@@ -70,13 +70,13 @@ module.exports = {
                     minSize: 0,
                     minChunks: 1,
                     priority: -10
-                },
-                common: {
-                    chunks: "all",
-                    minSize: 0,
-                    minChunks: 2,
-                    priority: -20
                 }
+                // common: {
+                //     chunks: "all",
+                //     minSize: 0,
+                //     minChunks: 2,
+                //     priority: -20
+                // }
             }
         }
     }
