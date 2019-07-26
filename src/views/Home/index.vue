@@ -21,7 +21,7 @@
 <template>
     <div class="wrapper">
         <div class="main">
-            <div class="withme-content">{{this.size | formatDecimal}}</div>
+            <div class="withme-content">{{this.size}}</div>
             {{this.apiPath}}
         </div>
         <mt-button type="primary">primary</mt-button>
