@@ -73,7 +73,6 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         hot: true,
-        host: "test2.duia.com",
         port: 8080,
         open: true
     }
