@@ -19,21 +19,4 @@ instance.interceptors.response.use(
         return Promise.reject(error);
     }
 );
-export default {
-    egPost: (data, params) => {
-        return instance.post(_apiPath + "/user/info", data, {
-            headers: {
-                cs: 12345
-            },
-            params
-        });
-    },
-    egGet: (data, params) => {
-        return instance.get(_apiPath + "/user/info", data, {
-            headers: {
-                cs: 12345
-            },
-            params
-        });
-    }
-};
+export default {};

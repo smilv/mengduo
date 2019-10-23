@@ -32,7 +32,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: [path.resolve(__dirname, "../node_modules/mint-ui")],
                 loader: ["style-loader", "css-loader", "px2rem-loader", "postcss-loader"]
+            },
+            {
+                test: /\.css$/,
+                include: [path.resolve(__dirname, "../node_modules/mint-ui")],
+                loader: ["style-loader", "css-loader"]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
@@ -40,6 +46,14 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: "static/img/[name].[hash:8].[ext]"
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                loader: "url-loader",
+                options: {
+                    limit: 10000,
+                    name: "static/font/[name].[hash:8].[ext]"
                 }
             }
         ]
@@ -59,6 +73,7 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         hot: true,
+        host: "test2.duia.com",
         port: 8080,
         open: true
     }

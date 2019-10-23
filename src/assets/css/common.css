@@ -114,28 +114,3 @@ select {
     border: 0;
     outline: none;
 }
-
-.toast {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: auto;
-    height: auto;
-    line-height: 48px;
-    padding: 28px 45px;
-    font-size: 32px;
-    top: 45%;
-    color: #fff;
-    border-radius: 10px;
-    z-index: 100;
-}
-
-.toolsIcon {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: url("../img/tools_icon.png") no-repeat;
-    background-size: 100%;
-}

@@ -6,6 +6,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const path = require("path");
 const env = require("./env");
 
@@ -36,7 +37,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: [path.resolve(__dirname, "../node_modules/mint-ui")],
                 loader: [MiniCssExtractPlugin.loader, "css-loader", "px2rem-loader", "postcss-loader"]
+            },
+            {
+                test: /\.css$/,
+                include: [path.resolve(__dirname, "../node_modules/mint-ui")],
+                loader: [MiniCssExtractPlugin.loader, "css-loader"]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
@@ -44,6 +51,14 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: "static/img/[name].[hash:8].[ext]"
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                loader: "url-loader",
+                options: {
+                    limit: 10000,
+                    name: "static/font/[name].[hash:8].[ext]"
                 }
             }
         ]
@@ -60,24 +75,6 @@ module.exports = {
         }),
         new OptimizeCssAssetsPlugin(),
         new webpack.DefinePlugin(env)
-    ],
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    chunks: "all",
-                    test: /node_modules/,
-                    minSize: 0,
-                    minChunks: 1,
-                    priority: -10
-                }
-                // common: {
-                //     chunks: "all",
-                //     minSize: 0,
-                //     minChunks: 2,
-                //     priority: -20
-                // }
-            }
-        }
-    }
+        // new BundleAnalyzerPlugin()
+    ]
 };

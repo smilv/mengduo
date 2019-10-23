@@ -1,12 +1,8 @@
 {
     "scripts": {
         "start": "cross-env BUILD_TYPE=dev webpack-dev-server --config config/webpack.config.dev.js",
-        "build": "cross-env BUILD_TYPE=test webpack --config config/webpack.config.prod.js"
+        "build": "cross-env BUILD_TYPE=pro webpack --config config/webpack.config.prod.js"
     },
-    "bugs": {
-        "url": "https://github.com/smilv/mengduo/issues"
-    },
-    "homepage": "https://github.com/smilv/mengduo#readme",
     "devDependencies": {
         "autoprefixer": "^9.5.0",
         "axios": "^0.18.0",
@@ -35,6 +31,7 @@
         "vue-router": "^3.0.2",
         "vue-template-compiler": "^2.6.10",
         "webpack": "^4.29.6",
+        "webpack-bundle-analyzer": "^3.5.2",
         "webpack-cli": "^3.3.0",
         "webpack-dev-server": "^3.2.1"
     }
