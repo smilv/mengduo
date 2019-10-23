@@ -37,13 +37,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: [path.resolve(__dirname, "../node_modules/mint-ui")],
                 loader: [MiniCssExtractPlugin.loader, "css-loader", "px2rem-loader", "postcss-loader"]
-            },
-            {
-                test: /\.css$/,
-                include: [path.resolve(__dirname, "../node_modules/mint-ui")],
-                loader: [MiniCssExtractPlugin.loader, "css-loader"]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/,
